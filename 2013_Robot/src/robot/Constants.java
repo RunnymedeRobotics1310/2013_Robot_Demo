@@ -27,16 +27,16 @@ public class Constants {
     
     //PWM outputs
     public static final int LEFT_MOTOR_PWM_CHANNEL            = 1;
-    public static final int RIGHT_MOTOR_PWM_CHANNEL           = 2;
+    public static final int RIGHT_MOTOR_PWM_CHANNEL           = 0;
     public static final int PICKUP_ROLLER_MOTOR_PWM_CHANNEL   = 3;
-    public static final int SHOOTER_MOTOR_PWM_CHANNEL         = 4;
-    public static final int ELEVATOR_ROLLER_MOTOR_PWM_CHANNEL = 5;
+    public static final int SHOOTER_MOTOR_PWM_CHANNEL         = 2;
+    public static final int ELEVATOR_ROLLER_MOTOR_PWM_CHANNEL = 4;
     
     //Pneumatic Solenoid outputs
-    public static final int SHIFTER_PNEUMATIC_PORT        = 1;
-    public static final int SHOOTER_LOADER_PNEUMATIC_PORT = 2;
-    public static final int PICKUP_PNEUMATIC_PORT         = 3;
-    public static final int SHOOTER_LIFTER_PNEUMATIC_PORT = 4;
+    public static final int SHIFTER_PNEUMATIC_PORT        	= 2;
+    public static final int SHOOTER_LOADER_PNEUMATIC_PORT 	= 4;
+    public static final int PICKUP_PNEUMATIC_PORT         	= 0;
+    public static final int SHOOTER_LIFTER_PNEUMATIC_PORT 	= 6;
     
     //Digital inputs
     public static final int SHOOTER_ENCODER_DIO_PORT       = 5;

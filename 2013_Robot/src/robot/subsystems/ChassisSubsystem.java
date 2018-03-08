@@ -1,7 +1,7 @@
 package robot.subsystems;
 
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.RobotDrive;
-import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -13,7 +13,8 @@ public class ChassisSubsystem extends Subsystem {
     Victor vicLeft = new Victor(Constants.LEFT_MOTOR_PWM_CHANNEL);
     Victor vicRight = new Victor(Constants.RIGHT_MOTOR_PWM_CHANNEL);
     
-    public Solenoid shifter = new Solenoid(Constants.SHIFTER_PNEUMATIC_PORT); //Pneumatics are initialized in CommandBase.java
+    public DoubleSolenoid shifter = new DoubleSolenoid(
+    		Constants.SHIFTER_PNEUMATIC_PORT, Constants.SHIFTER_PNEUMATIC_PORT+1); //Pneumatics are initialized in CommandBase.java
     
     RobotDrive robotDrive = new RobotDrive(vicLeft, vicRight);
 

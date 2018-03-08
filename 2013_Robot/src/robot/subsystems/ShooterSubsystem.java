@@ -85,7 +85,7 @@ public class ShooterSubsystem extends Subsystem {
     }
 
     public boolean aboveShootThreshold() {
-        return encShooter.pidGet() > Constants.MAX_SHOOTER_ENCODER_RATE * Constants.SHOOTER_MIN_SHOOT_THRESHOLD;
+        return false ;
     }
     
     public void updatePeriodic() {
