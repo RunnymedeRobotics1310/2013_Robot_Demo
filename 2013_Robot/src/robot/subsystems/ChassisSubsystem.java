@@ -6,16 +6,12 @@ import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 import robot.Constants;
-import robot.Pneumatic;
 import robot.commands.TeleopDriveCommand;
 
 public class ChassisSubsystem extends Subsystem {
 
     Victor vicLeft = new Victor(Constants.LEFT_MOTOR_PWM_CHANNEL);
     Victor vicRight = new Victor(Constants.RIGHT_MOTOR_PWM_CHANNEL);
-    
-    Pneumatic shifterPneumatic; //Pneumatics are initialized in CommandBase.java
-
     
     public Solenoid shifter = new Solenoid(Constants.SHIFTER_PNEUMATIC_PORT); //Pneumatics are initialized in CommandBase.java
     
