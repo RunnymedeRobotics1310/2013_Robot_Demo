@@ -86,7 +86,7 @@ public class ShooterSubsystem extends Subsystem {
     }
 
     public boolean aboveShootThreshold() {
-        return false ;
+        return true ;
     }
     
     public void updatePeriodic() {
