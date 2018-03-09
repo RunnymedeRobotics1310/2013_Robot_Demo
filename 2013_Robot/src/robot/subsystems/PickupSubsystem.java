@@ -1,7 +1,7 @@
 package robot.subsystems;
 
 import edu.wpi.first.wpilibj.DigitalInput;
-import edu.wpi.first.wpilibj.Solenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
@@ -17,7 +17,8 @@ public class PickupSubsystem extends Subsystem {
     DigitalInput pickupFrisbeeSensor = new DigitalInput(Constants.PICKUP_FRISBEE_SENSOR_DIO_PORT);
 
     //Pneumatics are initialized in CommandBase.java
-    private Solenoid pickupPneumatic = new Solenoid(Constants.PICKUP_PNEUMATIC_PORT);
+    private DoubleSolenoid pickupPneumatic = new DoubleSolenoid(
+    		Constants.PICKUP_PNEUMATIC_PORT, Constants.PICKUP_PNEUMATIC_PORT+1);
 
     boolean lastFrisbeeSensor = false;
     double lastFrisbeeSensorTime = 0.0;

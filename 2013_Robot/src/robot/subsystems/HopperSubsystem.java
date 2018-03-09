@@ -1,7 +1,7 @@
 package robot.subsystems;
 
 import edu.wpi.first.wpilibj.DigitalInput;
-import edu.wpi.first.wpilibj.Solenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -10,7 +10,8 @@ import robot.commands.TeleopHopperCommand;
 
 public class HopperSubsystem extends Subsystem {
 
-    private Solenoid shooterLoader = new Solenoid(Constants.SHOOTER_LOADER_PNEUMATIC_PORT);
+    private DoubleSolenoid shooterLoader = new DoubleSolenoid(
+    		Constants.SHOOTER_LOADER_PNEUMATIC_PORT, Constants.SHOOTER_LOADER_PNEUMATIC_PORT+1);
     private DigitalInput frisbeeSensor = new DigitalInput(Constants.HOPPER_FRISBEE_SENSOR_DIO_PORT);
 
     double lastReleaseTime = 0.0;

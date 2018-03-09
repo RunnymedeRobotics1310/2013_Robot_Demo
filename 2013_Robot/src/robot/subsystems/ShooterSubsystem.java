@@ -3,7 +3,7 @@ package robot.subsystems;
 import com.torontocodingcollective.pid.TSpeedPID;
 
 import edu.wpi.first.wpilibj.Counter;
-import edu.wpi.first.wpilibj.Solenoid;
+import edu.wpi.first.wpilibj.DoubleSolenoid;
 import edu.wpi.first.wpilibj.Victor;
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
@@ -20,7 +20,8 @@ public class ShooterSubsystem extends Subsystem {
     //ParsablePIDController pidShooter = new ParsablePIDController("pidshooter", 0.05, 0.0, 0.0, 0.0059, encShooter, vicShooter); //0.0048
 
     //Pneumatics are initialized in CommandBase.java
-    private Solenoid shooterLifterPneumatic = new Solenoid(Constants.SHOOTER_LIFTER_PNEUMATIC_PORT);
+    private DoubleSolenoid shooterLifterPneumatic = new DoubleSolenoid(
+    		Constants.SHOOTER_LIFTER_PNEUMATIC_PORT, Constants.SHOOTER_LIFTER_PNEUMATIC_PORT+1);
 
     ShooterState shooterState = ShooterState.LOAD;
     double setpoint = 0.0;

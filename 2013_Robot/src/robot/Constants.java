@@ -33,9 +33,9 @@ public class Constants {
     public static final int ELEVATOR_ROLLER_MOTOR_PWM_CHANNEL = 4;
     
     //Pneumatic Solenoid outputs
-    public static final int SHIFTER_PNEUMATIC_PORT        	= 2;
-    public static final int SHOOTER_LOADER_PNEUMATIC_PORT 	= 4;
-    public static final int PICKUP_PNEUMATIC_PORT         	= 0;
+    public static final int SHIFTER_PNEUMATIC_PORT        	= 0;
+    public static final int SHOOTER_LOADER_PNEUMATIC_PORT 	= 2;
+    public static final int PICKUP_PNEUMATIC_PORT         	= 4;
     public static final int SHOOTER_LIFTER_PNEUMATIC_PORT 	= 6;
     
     //Digital inputs
